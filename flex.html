@@ -5,27 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex練習</title>
     <style>
-    .wrapper{
-        width: 900px;
-        background-color: #ffa5a5;
-        display: flex;
-        justify-content: space-between;
-    }
+     .wrapper {
+            width: 900px;
+            background-color: #d1ffa4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+            height: 400px;
 
-    .box{
-        width: 180px;
-        height: 190px;
-        box-sizing: border-box;
-        border: 1px solid #000;
-        background-color: #9ce1ff;
-    }
+        }
+
+        .box {
+            width: 180px;
+            height: 190px;
+            background-color: #afafaf;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            font-size: 30px;
+        }
+
+        .box1 {
+            width: 80px;
+        }
+
+        .box2 {
+            width: 300px;
+        }
+
+        .box3 {
+            width: 170px;
+
+        }
+        .h1 {height: 160px;}
+        .h2 {height: 400px;}
+        .h3 {height: 220px;}
+        .spec {
+           width: 600px;
+           height: 600px;
+           margin: auto;
+           background-color: #fcffd2;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        
     </style>
 </head>
+
 <body>
+    <h2>justify主軸對齊</h2>
     <div class="wrapper">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
     </div>
+    <h2>align-items 交叉軸對齊</h2>
+    <div class="wrapper">
+        <div class="box box1 h1">1</div>
+        <div class="box box2 h2">2</div>
+        <div class="box box3 h3">3</div>
+    </div>
+
+    <div class="spec">
+        <div class="box center"></div>
+    </div>
+
 </body>
+
 </html>
