@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>並列*2</title>
+
+    <style>
+        .wrapper {
+           width: 1070px;
+           margin: auto;
+        }
+        .img{
+            width: 170px;
+            height: 128px;
+            background-color: #eeeeee;
+            float: left;
+        }
+        .left{
+            float: left;
+            width: 470px;
+        }
+        .right{
+            float: right;
+            width: 470px;
+        }
+        .img-left{
+            float: left;
+        }
+
+        .paragraph{
+            float: right;
+            width: 270px;
+        }
+
+        h4{
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        p{
+            font-size: 16px; 
+        }
+
+        .clear {
+          clear: both;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="img-left">
+                <div class="img">圖片</div>
+            </div>
+            <div class="paragraph">
+                <h4>Quality</h4>
+                <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi nihil tantas platonem eos. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        <div class="right">
+            <div class="img-left">
+                <div class="img">圖片</div>
+            </div>
+            <div class="paragraph">
+                <h4>Helpful</h4>
+                <p>Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

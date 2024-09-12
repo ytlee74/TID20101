@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float position</title>
+    <style>
+     .img {
+        width: 300px;
+        height: 384px;
+        background-color: #EEEEEE;
+     }
+     h3 {
+        font-size: 56px;
+     }
+     h3 span {
+         font-size: 20px;
+     }
+     p {
+        font-size: 16px;
+     }
+     button {
+       width: 170px;
+       text-align: center;
+       padding: 10px;
+       background-color:#0076FF;
+       border: 1px solid #0076FF;
+       font-size: 16px;
+       color: #fff
+
+     }
+     /* 排版 */
+     .content {
+        width: 1126px;
+        margin: auto;
+     }
+     .left {
+       float: left;
+       width: 470px;
+     }
+     .right {
+          float: right;
+          position: relative;
+     }
+     .clear {
+        clear: both; 
+
+     } 
+     .a2 {
+        position: absolute;
+        left : 226px;
+        top: 83px;
+        background-color: #aaaaaa;
+        z-index: 2;
+     }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <div class="content">
+         <div class="left">
+             <h3>
+                Digital design<br>
+                <span>Exceptional level of service</span>
+             </h3>
+             <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei.</p>
+             <button>read more</button>
+         </div>
+         <div class="right">
+            <div class="img a1">1</div>
+            <div class="img a2">2</div>
+         </div>
+         <div class="clear"></div>
+       </div>
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+    .nav {
+        height:100px;
+        width:200px;
+        margin-bottom: 20px;
+        background-color: aquamarine;
+    }
+
+    #unique1 {
+        height:100px;
+        width:20px;
+        margin-bottom: 20px;
+        background-color: rgb(133, 127, 255); 
+    }
+
+    #unique2 {
+        height:100px;
+        width:20px;
+        margin-bottom: 20px;
+        background-color: rgb(255, 31, 31); 
+    }
+
+    #webnav {
+        background-color: gainsboro;
+        padding: 20px;
+    }
+
+    .navlist {
+        display:inline-block;
+        margin:20px;
+    }
+
+
+    .img_01 {
+        width:100px;
+    }
+    .base {
+        border:2px solid rgb(0, 135, 0)
+    }

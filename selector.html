@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇器</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            color: rgb(0, 34, 255);
+        }
+
+        p.title {
+            color: #f20;
+        }
+
+        p.highline {
+            color: yellow;
+        }
+
+        p.bold {
+            font-weight: bold;
+        }
+
+        p.underline {
+            text-decoration: underline;
+        }
+
+        p.del {
+            text-decoration: line-through;
+        }
+
+        /* 屬性選擇器 */
+        a[title] {
+            color: #ff00ee;
+
+        }
+
+        input[type="text"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #f20;
+            display: block;
+        }
+
+        a[href^="https"] {
+            color: #f20
+        }
+
+        img[src$=".jpeg"] {
+            border: 5px solid blue;
+        }
+
+        /* 選擇 title 屬性中包含 "flower" 的所有元素 */
+        [title*="flower"] {
+            font-style: italic;
+            font-size: 40px;
+        }
+
+        body ,h1 , h2 ,h3 , p {
+           margin: 0;
+           padding: 0;
+        }
+        h1 , h2 , h3 ,h4 , h5, p {
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p{
+            color:#f20;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3>通用選擇器 / 類別選擇器 / 多類別選擇器</h3>
+        <p class="title bold del">內文文章bold</p>
+        <p class="underline">內文文章002</p>
+        <p>內文文章002</p>
+        <p class="highline bold underline">強調文字</p>
+        <span class="title">span內文文章002</span>
+        <h3>屬性選擇器</h3>
+        <a href="#" title="yahoo連結">超連結</a>
+        <a href="#">超連結(沒有title)</a>
+        <input type="text">
+        <input type="email">
+        <a href="http://">http link</a>
+        <a href="https://">https link</a>
+        <img src="./images/a.jpeg" alt="">
+        <a href="" title="this is flower">flower</a>
+        <a href="" title="this is pen">pen</a>
+
+        <div class="section">
+            <p>124
+                <p>567</p>
+            </p>
+        </div>
+
+        
+    </div>
+
+</body>
+
+</html>

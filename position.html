@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        .box-a{
+
+            width:140px;
+            height:160px;
+            background-color: #5f5f5f;
+            position: absolute;
+            top: 30px;
+            left: 50px;
+        }
+        
+        .box-b{
+            width:140px;
+            height:160px;
+            background-color: #ff9090;
+            position: absolute;
+            top: 117px;
+            left: 103px; 
+
+        }
+        .container{
+            border: 1px dashed #CCC;
+            width:500px;
+            height: 300px;
+            position: relative;
+            left: 300px;
+            top: 300px;
+            margin: auto;
+        }
+        .box-c{
+            width:140px;
+            height:160px;
+            background-color: #ff9090;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-a">a</div>
+    <div class="box-b">b</div>
+    <div class="container">
+        <div class="box-c">c</div>
+        <div class="box-d">d</div>
+    </div>
+</body>
+</html>

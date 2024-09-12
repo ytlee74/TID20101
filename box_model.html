@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box_model</title>
+    <style>
+        /* 消除預設值 */
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin : 50px;
+            border: 10px solid #ff0d0d;
+
+        }
+        .content-box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: content-box;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        .border-box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: border-box;
+            background-color: lightcoral;
+        }
+
+        /* 容器永遠保持置中對齊的屬性：但容器一定要設定寬度 */
+        .section{
+            width: 300px;
+            height: 200px;background-color: #00a82d;
+            margin: auto;
+            text-align: center;
+        }
+        .inner_box{
+            width: 100px;
+            height: 100px;
+            background-color: #0066ff;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section1 {
+            /* 父層 */
+            width: 100%;
+            min-height: 500px;
+            background-color: #08ff9c;
+            /* 解決父層的magrin-top三種方法 */
+            /* border: 10px solid #08ff9c; */
+            /* overflow: hidden; */
+            /* overflow 不要常用，會找不到，除非特殊情境 */
+            padding-top: 50px;
+            /* padding-top是最好的解決方法 */
+        }
+
+        .margintop {
+            /* 子層 */
+            /* 左右不會受影響 */
+            /* margin-top: 100px; */
+            width: 100%;
+            height: 300px;
+            background-color: #ff992d;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <div class="content-box"></div>
+    <div class="border-box"></div>
+
+    <div class="section">文字置中
+        <div class="inner_box">inner_box</div>
+    </div>
+
+
+
+
+
+
+
+    <h3>margin top 迷思</h3>
+    <div class="section1">
+        <div class="margintop">子層</div>
+    </div>
+
+    
+</body>
+</html>
