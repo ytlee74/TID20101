@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>並列*2(flex用法)</title>
+
+    <style>
+        .wrapper {
+           width: 1070px;
+           margin: auto;
+           display: flex;
+           justify-content: space-between;
+        }
+
+        .box{
+            width: 470px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img{
+            width: 170px;
+            height: 128px;
+            background-color: #eeeeee;
+        }
+
+        .paragraph{
+            width: 270px;
+            margin-left: 30px;
+        }
+
+        h4{
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        p{
+            font-size: 16px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="img">圖片</div>
+            <div class="paragraph">
+                <h4>Quality</h4>
+                <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi nihil tantas platonem eos. </p>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="img">圖片</div>
+            <div class="paragraph">
+                <h4>Helpful</h4>
+                <p>Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
