@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixing</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper{
+            margin: auto;
+            width: 1170px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .right{
+            width: 570px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .img{
+            background-color: #d5d5d5;
+            margin-top: 20px;
+        }
+
+        .img01{
+            width: 570px;
+            height:544px;
+        }
+
+        .img02{
+            width: 570px;
+            height:256px;
+        }
+
+        .img03{
+            width: 270px;
+            height:256px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="img img01"></div>
+        </div>
+        <div class="right">
+            <div class="img img02"></div>
+            <div class="img img03"></div>
+            <div class="img img03"></div>
+        </div>
+
+    </div>
+</body>
+</html>
