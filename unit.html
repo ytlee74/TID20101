@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單位</title>
+    <style>
+        body {
+            /* 單位像素 */
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+            background-color: #0037ff;
+        }
+
+        .section {
+            /* 這個容器 1em 參考預設值 */
+            font-size: 20px;
+        }
+
+        p.em {
+            font-size: 2em;
+        }
+
+        .spacing-1 {
+            height: 1em;
+        }
+
+        .spacing-2 {
+            height: 2em;
+        }
+        .rem {
+            /*em 參考預設值  */
+           font-size: 20px; 
+        }
+        .rem h1 {
+            /* 參考根目錄底下的html標籤 字體大小 */
+         font-size: 4rem;
+        }
+
+        /* 用 % 數去調整大小 */
+        .w100{
+            width: 100%;
+            height: 300px;
+            margin: auto;
+            background-color: #ffd2d2;
+        }
+        .w50{
+            width: 50%;
+            height: 200px;
+            background-color: #de3535;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="box"></div>
+        <div class="spacing-1"></div>
+        <p class="em">
+            這是em字體大小
+        </p>
+    </div>
+    <section class="rem">
+        <h1>這是rem標題大小</h1>
+    </section>
+
+
+    <div class="w100">
+        跟螢幕寬度一樣大
+        <div class="w50"></div>
+    </div>
+</body>
+
+</html>
