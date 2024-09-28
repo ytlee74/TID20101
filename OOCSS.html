@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSSCSS</title>
+    <style>
+        .btn{
+            width: 100px;
+            padding: 10px 20px;
+        }
+
+        .btn-default{
+            background-color: #0008ff;
+            color:#FFF;
+        }
+
+        .btn-default:hover{
+            background-color: #80d2ff;
+            color:#000;
+        }
+
+        .btn-success{
+            background-color: #008a09;
+            color: #FFF;
+        }
+
+        .btn-error{
+            background-color: #ff0000;
+            color: #FFF;
+        }
+
+
+        .section{
+            display: flex;
+            gap: 20px;
+        }
+        .card{
+            flex: 1;
+            background-color: #ffb0b0;
+        }
+        .button{
+            padding: 10px 20px;
+            text-align: center;
+            
+        }
+        .button-default{
+            background-color: #6369ff;
+            color:#FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn btn-default">預設按鈕</div>
+    <div class="btn btn-success">完成按鈕</div>
+    <div class="btn btn-error">失敗按鈕</div>
+
+    <div class="section">
+        <div class="card">
+            <div class="img">圖片</div>
+            <h3>標題</h3>
+            <p>文字</p>
+            <div class="button button-default">按鈕</div>
+        </div>
+        <div class="card">
+            <div class="img">圖片</div>
+            <h3>標題</h3>
+            <p>文字</p>
+            <div class="button button-default">按鈕</div>
+        </div>
+        <div class="card">
+            <div class="img">圖片</div>
+            <h3>標題</h3>
+            <p>文字</p>
+            <div class="button button-default">按鈕</div>
+        </div>
+    </div>
+    
+</body>
+</html>
