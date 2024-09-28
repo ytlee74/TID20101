@@ -23,45 +23,40 @@
             justify-content: space-between;
             align-items: center;
         }
-        .right{
-            width: 570px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .img{
-            background-color: #d5d5d5;
-            margin-top: 25px;
-        }
-
-        .img01{
+        .item{
+            background-color: #cbcbcb;
             width: 570px;
             height:544px;
-        }
+            margin: 10px;
+            padding: 5px;
 
-        .img02{
+        }
+        .item-1 {
+            flex: 2;
             width: 570px;
             height:256px;
         }
 
-        .img03{
+        .item-2 {
+            flex: 1;
             width: 270px;
             height: 256px;
         }
+
+        .item-3 {
+            flex: 1 1 50%; 
+            width: 270px;
+            height: 256px;
+                }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
-            <div class="left">
-            <div class="img img01"></div>
-            </div>
-            <div class="right">
-                <div class="img img02"></div>
-                <div class="img img03"></div>
-                <div class="img img03"></div>
-            </div>
+            <div class="item"></div>
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
         </div>
     </div>
 </body>
