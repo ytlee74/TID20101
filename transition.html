@@ -17,9 +17,34 @@
         .btn:hover{
             background-color: #ff9900;
         }
+
+        .rect{
+            padding: 10px 20px;
+            width: 300px;
+            height: 40px;
+            background-color: #0015ff;
+            transition: width .4s ease;
+        }
+
+        .rect:hover{
+            width: 500px;
+        }
+
+        .rect-transform{
+            width: 200px;
+            height: 100px;
+            background-color: #ffee00;
+            transition: transform .4s ease;
+        }
+        .rect-transform:hover{
+            transform: rotate(45deg) scale(2);
+        }
+
     </style>
 </head>
 <body>
     <div class="btn">按鈕 btn</div>
+    <div class="rect"></div>
+    <div class="rect-transform"></div>
 </body>
 </html>
