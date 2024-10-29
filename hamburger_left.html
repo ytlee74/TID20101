@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式選單設計</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            height: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav .navlist {
+            list-style: none;
+            margin: 0;
+            display: flex;
+        }
+
+        nav .navlist li {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            margin: 3px 0;
+            background-color: #ffffff;
+            transform-origin: left center;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        /* 轉換hamburger 型態  */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .side_menu {
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            background-color: #2e2e2e;
+            color: #fff;
+            z-index: 1000;
+            transition: all .3s ease;
+        }
+        .side_menu.active {
+            left : 0
+
+        } 
+
+        .side_menu .navlist {
+            display: none;
+        }
+
+        /* 手機斷點 */
+        @media screen and (max-width:768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav .navlist {
+                display: none;
+            }
+            .side_menu .navlist {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+        }
+        .side_menu .navlist li {
+            
+            margin: 20px 0;
+
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Mywebsite</div>
+        <ul class="navlist">
+            <li>about</li>
+            <li>product</li>
+            <li>news</li>
+            <li>contact</li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="side_menu">
+            <ul class="navlist">
+                <li>about</li>
+                <li>product</li>
+                <li>news</li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidemenu = document.querySelector('.side_menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            sidemenu.classList.toggle('active');
+        })
+
+    </script>
+</body>
+
+</html>
