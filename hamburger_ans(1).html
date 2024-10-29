@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式選單設計</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        nav {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #000000;
+          color: #fff;
+          padding: 10px;
+          height: 80px;
+        }
+        nav .logo {
+           font-size: 26px;
+           font-weight: bold;
+        }
+        nav .navlist {
+            list-style: none;
+            margin: 0;
+            display: flex;
+        }
+        nav .navlist li {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            margin: 3px 0;
+            background-color: #ffffff;
+            transform-origin: left center;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        /* 轉換hamburger 型態  */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        /* 手機斷點 */
+        @media screen and (max-width:768px) {
+           .hamburger {
+                display: flex;
+           } 
+           nav .navlist {
+              flex-direction: column;
+              position: absolute;
+              width: 100%;
+              height:calc(100vh - 80px);
+              /* 要減去nav的高度 */
+              top: 80px;
+              left: 0;
+              background-color: #393939;
+              display: none;
+              /* 手機選單要消失 */
+              justify-content: center;
+              align-items: center;
+           }
+           nav .navlist.active {
+            display: flex;
+            /* 按下去之後選單要出現 */
+           }
+           nav .navlist li {
+              margin: 20px;
+
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Mywebsite</div>
+        <ul class="navlist">
+            <li>about</li>
+            <li>product</li>
+            <li>news</li>
+            <li>contact</li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navlist = document.querySelector('.navlist');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navlist.classList.toggle('active');
+        })
+
+    </script>
+</body>
+
+</html>

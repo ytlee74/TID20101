@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>響應式選單設計</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-           /* margin: 0; */
-           /* padding: 0; */
-         font-size: 16px;
-         background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background-color: #fff;
         }
 
-        * {
-          box-sizing: border-box;
+        .logo{
+            width: 100;
+            display: flex;
+
         }
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-items: center;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            height: 80px;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 0;
+            font-size: 18px;
+        }
+        .nav-item{
+            display: flex;
+            gap: 20px
+        }
+
 
         .hamburger {
-           display: flex;
+           display: none;
            flex-direction: column;
            cursor: pointer;
         }
@@ -26,8 +53,10 @@
           width: 25px;
           height: 3px;
           margin: 3px 0;
-          background-color: #000000;
+          background-color: #ffffff;
           transform-origin: left center;
+          
+          transition: all .3s ease;
         }
         
         .hamburger.active span:nth-child(1) {
@@ -42,14 +71,52 @@
             transform: rotate(-45deg);
         }
 
+        /* 手機斷點 */
+        @media screen and (max-width:768px) {
+           .hamburger {
+                display: flex;
+            } 
+           .nav-item {
+              flex-direction: column;
+              position: absolute;
+              width: 100%;
+              height:calc(100vh - 80px);
+              top: 80px;
+              left: 0;
+              background-color: #393939;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .nav-item.active {
+              display: flex;
+            /* 按下去之後選單要出現 */
+            }
+            .nav-item li {
+              margin: 10px;
+
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+
+    <nav>
+        <div class="logo">LOGO</div>
+        <ul class="nav-item">
+            <li>關於我們</li>
+            <li>最新消息</li>
+            <li>課程一覽</li>
+            <li>預約試聽</li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
     
     <script>
         let hamburger = document.querySelector('.hamburger');
