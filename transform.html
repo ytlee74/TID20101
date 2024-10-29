@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #FF2;
+            position: relative;
+            left: 200px;
+            padding: 20px;
+        }
+        .translate{
+            /* position: relative;
+            top: 200px;
+            left: 100p; */
+            transform: translate(100px,200px);
+        }
+        .rotate{
+            transform: rotate(45deg);
+            background-color: rgb(255, 34, 34);
+        }
+        .scale{
+            transform: scale(2);
+            background-color: rgb(49, 34, 255);
+        }
+
+        /* 組合寫法 */
+        .multi{
+            transform: translate(100px,200px) rotate(45deg) scale(2);
+            background-color: #00b806;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale 2x</div>
+    <div class="box multi">multi</div>
+</body>
+</html>
